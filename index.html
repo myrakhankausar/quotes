@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Advice generator app</title>
+</head>
+<body>
+  <div class="container">
+    <h1>Quote of the day!</h1>
+    <p class="quote"></p>
+    <button>Click me</button>
+  </div>
+
+  <script>
+  const URL = "https://api.adviceslip.com/advice";
+  const btn = document.querySelector("button");
+  let p = document.querySelector("p");
+  let container = document.querySelector(".container");
+  btn.addEventListener("click", async function() {
+    const promise = await fetch(URL);
+    const data = await promise.json();
+    console.log(data);
+    p.innerText = data.slip.advice;
+    let div = document.querySelector
+  });
+  </script>
+</body>
+</html>
